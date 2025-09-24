@@ -1,0 +1,44 @@
+{
+    "database_name_1": {
+        "configuration / settings": {},
+        "casts": {},
+        "event triggers": {},
+        "extensions": {},
+        "foreign data wrappers": {},
+        "languages": {},
+        "publications": {},
+        "schemas": {
+            "schema_name_1": {
+ #               "aggregates": {},
+ #               "collations": {},
+ #               "domains": {},
+ #               "fts configurations": {},
+ #               "fts dictionaries": {},
+ #               "fts parsers": {},
+ #               "fts templates": {},
+ #               "foreign tables": {},
+                "functions": {},
+                "materialized views": {},
+                "operators": {},
+                "procedures": {},
+                "sequences": {},
+                "tables": {
+                    "table_name_1": {
+                        "columns": {},
+                        "constraints": {},
+                        "indexes": {},
+                        "rls policies": {},
+                        "rules": {},
+                        "triggers": {}
+                    }
+                },
+                "trigger functions": {},
+                "types": {},
+                "views": {}
+            }
+        },
+        "subscriptions": {},
+        "roles": {},
+        "version": {}
+    }
+}
