@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "Python Data Science Template"
+version = "0.1.0"
+description = "A template for Python data science projects"
+authors = ["Matthias Daues <matthias.daues@datenschoenheit.de>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.3.0"
+psycopg2 = "^2.9"
+aiosql = "^13.0"
+openpyxl = "^3.1"
+python-dotenv = "^1.0"
+jupyter = "^1.1.1"
+notebook = "^7.4.3"
+ipykernel = "^6.29.5"
+
+[[tool.poetry.packages]]
+include = "src"
+
+[tool.poetry.scripts]
+nb = "src.python.utils.jupyter_helpers:start_notebook"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
