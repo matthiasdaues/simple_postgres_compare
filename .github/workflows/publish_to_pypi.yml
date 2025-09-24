@@ -1,0 +1,36 @@
+name: Publish Python package
+
+on:
+  push:
+    tags:
+      - "v*"  # e.g. v1.0.0
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install Poetry
+        run: |
+          pip install --upgrade pip
+          pip install poetry
+
+      - name: Install dependencies
+        run: poetry install
+
+      - name: Build package
+        run: poetry build
+
+      - name: Configure API token
+        run: poetry config pypi-token.pypi ${{ secrets.PYPI_PASSWORD }}
+
+      - name: Publish to PyPI
+        run: poetry publish
