@@ -19,11 +19,16 @@ deepdiff = "^8.6.1"
 asyncpg = "^0.30.0"
 simple-postgres-setup = "^0.2.1"
 
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0"
+pytest-cov = "^4.1"
+
 [[tool.poetry.packages]]
 include = "src"
 
 [tool.poetry.scripts]
 nb = "src.python.utils.jupyter_helpers:start_notebook"
+pg-compare = "src.pg_compare.cli:main"
 
 [build-system]
 requires = ["poetry-core"]
